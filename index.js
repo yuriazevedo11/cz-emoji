@@ -12,7 +12,7 @@ const commitTypes = require('./lib/types.json');
 
 const defaultConfig = {
   types: commitTypes,
-  symbol: false,
+  symbol: true,
   skipQuestions: [''],
   subjectMaxLength: 75,
 };
@@ -28,7 +28,7 @@ function getEmojiChoices({ types, symbol }) {
     name: `${pad(choice.name, maxNameLength)}  ${choice.emoji}  ${
       choice.description
     }`,
-    value: symbol ? `${choice.emoji} ` : choice.code,
+    value: `${symbol ? choice.emoji : choice.code} ${choice.name}`,
     code: choice.code,
   }));
 }
@@ -65,7 +65,9 @@ function formatScope(scope) {
 }
 
 function formatHead({ type, scope, subject }) {
-  return [type, formatScope(scope), subject]
+  const typeAndScope = `${type}${formatScope(scope)}:`;
+
+  return [typeAndScope, subject]
     .filter(Boolean)
     .map((s) => s.trim())
     .join(' ');
