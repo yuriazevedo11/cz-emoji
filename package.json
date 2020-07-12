@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@yuriazevedo/eslint-config-react-native": "^1.0.0",
+    "commitizen": "^4.1.2",
     "eslint": "^7.4.0",
     "prettier": "^2.0.5"
   },
