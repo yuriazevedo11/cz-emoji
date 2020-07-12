@@ -5,7 +5,7 @@ My Commitizen adapter
 ## Installation
 
 ```
-yarn add @yuriazevedo/cz-emoji -D
+yarn add commitizen @yuriazevedo/cz-emoji -D
 ```
 
 ## Usage example
