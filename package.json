@@ -5,6 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "release": "yarn publish --access public",
     "cm": "git add . && git-cz"
   },
   "dependencies": {

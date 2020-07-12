@@ -36,6 +36,12 @@
     "name": "packages"
   },
   {
+    "emoji": "🔖",
+    "code": ":bookmark:",
+    "description": "Releasing / Version tags.",
+    "name": "release"
+  },
+  {
     "emoji": "📝",
     "code": ":pencil:",
     "description": "Writing docs.",
