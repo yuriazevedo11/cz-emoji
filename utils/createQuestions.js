@@ -19,7 +19,6 @@ function createQuestions(config) {
     threshold: 0.4,
     location: 0,
     distance: 100,
-    maxPatternLength: 32,
     minMatchCharLength: 1,
     keys: ['name', 'code'],
   });
@@ -32,9 +31,12 @@ function createQuestions(config) {
         config.questions && config.questions.type
           ? config.questions.type
           : "Select the type of change you're committing:",
-      source: (_answersSoFar, query) => {
-        return Promise.resolve(query ? fuzzy.search(query) : choices);
-      },
+      source: (_, query) =>
+        Promise.resolve(
+          query
+            ? fuzzy.search(query).map((response) => response.item)
+            : choices,
+        ),
     },
     {
       type: config.scopes ? 'list' : 'input',
