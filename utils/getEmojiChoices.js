@@ -11,7 +11,10 @@ function getEmojiChoices({ types, symbol }) {
     name: `${pad(choice.name, maxNameLength)}  ${choice.emoji}  ${
       choice.description
     }`,
-    value: `${symbol ? choice.emoji : choice.code} ${choice.name}`,
+    value: {
+      emoji: symbol ? `${choice.emoji} ` : choice.code,
+      name: choice.name,
+    },
     code: choice.code,
   }));
 }

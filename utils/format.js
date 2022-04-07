@@ -6,12 +6,8 @@ function formatScope(scope) {
 }
 
 function formatHead({ type, scope, subject }) {
-  const typeAndScope = `${type}${formatScope(scope)}:`;
-
-  return [typeAndScope, subject]
-    .filter(Boolean)
-    .map((s) => s.trim())
-    .join(' ');
+  const prelude = `${type.emoji} ${type.name}${formatScope(scope)}:`;
+  return `${prelude} ${subject}`;
 }
 
 function formatIssues(issues) {
