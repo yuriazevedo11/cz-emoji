@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "release": "yarn publish --access public",
-    "cm": "git add . && git-cz"
+    "cm": "git-cz"
   },
   "dependencies": {
     "cli-truncate": "^2.1.0",
@@ -34,6 +34,12 @@
     "emoji"
   ],
   "config": {
+    "cz-emoji": {
+      "skipQuestions": [
+        "scope",
+        "issues"
+      ]
+    },
     "commitizen": {
       "path": "./index.js"
     }
