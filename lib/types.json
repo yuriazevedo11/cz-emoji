@@ -33,7 +33,7 @@
     "emoji": "📦",
     "code": ":package:",
     "description": "Managing dependencies.",
-    "name": "packages"
+    "name": "deps"
   },
   {
     "emoji": "🔖",
@@ -52,6 +52,12 @@
     "code": ":wrench:",
     "description": "Changing configuration files.",
     "name": "config"
+  },
+  {
+    "emoji": "🚧",
+    "code": ":construction:",
+    "description": "Work in progress.",
+    "name": "wip"
   },
   {
     "emoji": "🎉",
