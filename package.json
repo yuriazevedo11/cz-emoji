@@ -1,7 +1,7 @@
 {
   "name": "@yuriazevedo/cz-emoji",
   "author": "Yuri Azevedo <yuriazevedo11@gmail.com>",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -26,7 +26,11 @@
   },
   "files": [
     "index.js",
-    "lib/types.json"
+    "lib/types.json",
+    "utils/createQuestions.js",
+    "utils/format.js",
+    "utils/getConfig.js",
+    "utils/getEmojiChoices.js"
   ],
   "keywords": [
     "commitizen",
